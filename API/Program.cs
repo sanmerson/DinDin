@@ -1,7 +1,9 @@
 using API.Context;
+using API.Services.Acoes;
 using API.Services.Entradas;
+using API.Services.Poupancas;
+using API.Services.Saidas;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IEntradaInterface, EntradaService>();
+builder.Services.AddScoped<ISaidaInterface, SaidaService>();
+builder.Services.AddScoped<IPoupancaInterface, PoupancaService>();
+builder.Services.AddScoped<IAcoesInterface, AcoesService>();
 
 var connectionDb = builder.Configuration.GetConnectionString("AppDbConnection");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionDb));
