@@ -30,6 +30,7 @@ secrets.json
 
 ## Migrations e dados do EF (opcional, se quiser ignorar)
 # Migrations/
+**/Migrations/
 
 ## Arquivos de pacotes
 packages/
