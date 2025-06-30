@@ -1,14 +1,13 @@
-﻿using API.Models;
+﻿using API.Context;
+using API.Models;
 using API.Models.Saidas;
 
 namespace API.Services.Saidas {
     public class SaidaService : ISaidaInterface {
-        public Task<List<ResponseModel<SaidasModel>>> ListarSaidas() {
-            throw new NotImplementedException();
-        }
+        private readonly AppDbContext _context;
 
-        public Task<ResponseModel<SaidasModel>> SaidaPorId() {
-            throw new NotImplementedException();
+        public SaidaService(AppDbContext context) {
+            _context = context;
         }
     }
 }

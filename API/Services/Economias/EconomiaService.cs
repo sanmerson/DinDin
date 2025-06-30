@@ -1,4 +1,4 @@
 ﻿namespace API.Services.Poupancas {
-    public class PoupancaService : IPoupancaInterface{
+    public class EconomiaService : IEconomiaInterface{
     }
 }

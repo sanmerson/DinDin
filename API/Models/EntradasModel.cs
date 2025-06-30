@@ -1,4 +1,5 @@
 ﻿using API.Models.Economias;
+using System.Text.Json.Serialization;
 
 namespace API.Models {
     public enum TipoEntrada {
@@ -9,9 +10,10 @@ namespace API.Models {
     public class EntradasModel {
         public int Id { get; set; }
         public required string Nome { get; set; }
-        public decimal Valor { get; set; }
+        public float Valor { get; set; }
         public DateTime DataEntrada { get; set; }
         public Boolean Recorrente { get; set; }
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public required TipoEntrada Tipo { get; set; }
     }
 }

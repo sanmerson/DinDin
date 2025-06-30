@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IEntradaInterface, EntradaService>();
 builder.Services.AddScoped<ISaidaInterface, SaidaService>();
-builder.Services.AddScoped<IPoupancaInterface, PoupancaService>();
+builder.Services.AddScoped<IEconomiaInterface, EconomiaService>();
 builder.Services.AddScoped<IAcoesInterface, AcoesService>();
 
 var connectionDb = builder.Configuration.GetConnectionString("AppDbConnection");
